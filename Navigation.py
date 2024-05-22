@@ -125,7 +125,14 @@ z
 # CTRL + PG UP => go to next tab on left
 # CTRL + PG DOWN => go to next tab on right
 
+## executing cell
+# CTRL + ENTER => run current cell
 
+## move cursor to start/end of line
+# CTRL + ALT + , => go to start of line
+# CTRL + ALT + . => go to end of line
 
-
-
+## move cursor to start/end of line and/or select until end or start of line
+# CTRL + ALT + SHIFT + , => select to start of line
+# CTRL + ALT + SHIFT + . => select to end of line
+# cursorLine search in shortcuts
