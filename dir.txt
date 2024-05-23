@@ -10,7 +10,7 @@
 05/22/2024  04:02 PM             2,404 Accessing Python Shell.py
 05/21/2024  06:32 PM    <DIR>          Comments and Docstrings
 05/21/2024  06:34 PM    <DIR>          Conditions
-05/22/2024  06:05 PM               177 dir.txt
+05/23/2024  10:54 AM                 0 dir.txt
 04/17/2024  04:49 PM             1,085 LICENSE
 05/21/2024  06:34 PM    <DIR>          Loops
 05/22/2024  03:17 PM             3,590 Navigation.py
@@ -21,5 +21,5 @@
 05/22/2024  06:04 PM               249 test_command.bat
 05/21/2024  06:33 PM    <DIR>          Variables and Operations
 05/21/2024  06:07 PM               600 Variables.py
-              11 File(s)         12,272 bytes
-               7 Dir(s)  591,917,731,840 bytes free
+              11 File(s)         12,095 bytes
+               7 Dir(s)  592,221,257,728 bytes free
