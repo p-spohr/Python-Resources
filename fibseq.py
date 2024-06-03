@@ -3,13 +3,14 @@
 # %%
 
 import time
+import sys
 
 # %%
 
 start_time = time.time()
 
 # correct!
-def fib_seq(n):
+def fib_seq(n=1):
 
     a, b = 0, 1
 
@@ -22,10 +23,21 @@ def fib_seq(n):
 
 # %%
 
-fib_value = fib_seq(1000000)
-end_time = time.time()
+# check to see if more than 1 argument is passed
+if len(sys.argv) < 2:
+    
+    print("Please input number greater than 1")
 
-print(f'Time Elapsed: {round(end_time - start_time, 2)}')
+else:
+
+    n_value = int(sys.argv[1])
+    fib_value = fib_seq(n_value)
+
+    end_time = time.time()
+
+    print(f'n:= {n_value}')
+    print(f'f(n)= {fib_value}')
+    print(f'Time Elapsed: {round(end_time - start_time, 6)}')
 
 
 # %%

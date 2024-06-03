@@ -67,12 +67,19 @@ z
 # 3
 # 2
 
+## copying lines
+# ALT + SHIFT + Up/Down => copy line up or down
+# copy this 
+# copy this 
+# copy this 
+# copy this 
+
 ## locating cursor history on files
 # ALT + LEFT/RIGHT ARROW => move forward right or backward left
 
 ## opening top menu
-
 # ALT + F/E/S/V/G/R/T/H => open top menu item according to initial
+
 ## opening explorer
 # CTRL + SHIFT + F => open search bar explorer
 # CTRL + SHIFT + E => open file explorer
@@ -81,7 +88,6 @@ z
 # CTRL + LEFT/RIGHT ARROW => skip white spaces and word to next one                   
 
 # CTRL + SHIFT + RIGHT/LEFT/UP/DOWN ARROW => highlight in pressed direction
-
 
 
 ## creating multiple cursors
