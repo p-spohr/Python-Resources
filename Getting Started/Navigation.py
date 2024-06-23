@@ -80,7 +80,7 @@ z
 ## opening top menu
 # ALT + F/E/S/V/G/R/T/H => open top menu item according to initial
 
-## opening explorer
+## opening explorer (Windows)
 # CTRL + SHIFT + F => open search bar explorer
 # CTRL + SHIFT + E => open file explorer
 
@@ -114,7 +114,7 @@ z
 # CTRL + K & S => save all
 
 # closing current window
-# ALT + F4 => close window (Windows command)
+# ALT + F4 => close window (Windows)
 
 # opening folder explorer
 # CTRL + K & CTRL O => open folder in explorer
@@ -126,12 +126,11 @@ z
 
 # CTRL + UP/DOWN ARROW => scroll up or down
 
-
 ## switching file tabs
 # CTRL + PG UP => go to next tab on left
 # CTRL + PG DOWN => go to next tab on right
 
-## executing cell
+## executing cell (when Jupyter and its extension are installed )
 # CTRL + ENTER => run current cell
 
 ## move cursor to start/end of line
@@ -142,3 +141,9 @@ z
 # CTRL + ALT + SHIFT + , => select to start of line
 # CTRL + ALT + SHIFT + . => select to end of line
 # cursorLine search in shortcuts
+
+## new Python file (needs to be set up)
+# CTRL + ALT + P
+
+## new folder (needs to be set up)
+# CTRL + ALT + N
