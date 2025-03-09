@@ -5,8 +5,8 @@
 import openai
 import base64
 import requests
+import json
 from login import openai_login
-
 
 # %%
 
@@ -139,11 +139,56 @@ payload = {
   "max_tokens": 300
 }
 
-response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
+# %%
+
+headers = {
+  "Content-Type": "application/json",
+  "Authorization": f"Bearer {openai_login.API_KEY}"
+}
+
+payload = {
+  "model": "gpt-4o-mini",
+  "messages": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "What is a rainbow?"
+        }
+      ]
+    }
+  ],
+  "max_tokens": 300
+}
 
 # %%
 
+payload_json = json.dumps(payload)
 
+# %%
+
+response = requests.post(
+  "https://api.openai.com/v1/chat/completions", 
+  headers=headers, 
+  data=payload_json)
+
+# %%
+
+type(response)
+
+# %%
+
+json.loads(response.text)
+
+# %%
+response.request.body
+
+# %%
+response.json()['choices'][0]['message']['content']
+
+
+# %%
 print(response.json())
 
 
