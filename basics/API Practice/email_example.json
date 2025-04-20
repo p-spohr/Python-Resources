@@ -1,0 +1,259 @@
+{
+    "id": "192612be1e17cb6e",
+    "threadId": "192612be1e17cb6e",
+    "labelIds": [
+        "IMPORTANT",
+        "CATEGORY_PERSONAL",
+        "INBOX"
+    ],
+    "snippet": "TEST",
+    "payload": {
+        "partId": "",
+        "mimeType": "multipart/alternative",
+        "filename": "",
+        "headers": [
+            {
+                "name": "Delivered-To",
+                "value": "spohrpatrick@gmail.com"
+            },
+            {
+                "name": "Received",
+                "value": "by 2002:a05:6839:158b:b0:875:cc09:b3f0 with SMTP id r11csp1118407nks;        Sun, 6 Oct 2024 02:31:59 -0700 (PDT)"
+            },
+            {
+                "name": "X-Google-Smtp-Source",
+                "value": "AGHT+IHF5vgRPwl3zsOuhxs5DyR5Z5nIMA5jACyTmbtB/rrRBt4okcu144Wsc0y/y7NvOJHVwslw"
+            },
+            {
+                "name": "X-Received",
+                "value": "by 2002:a17:903:192:b0:20b:ad74:c84f with SMTP id d9443c01a7336-20bfe021ea3mr107879275ad.26.1728207118849;        Sun, 06 Oct 2024 02:31:58 -0700 (PDT)"
+            },
+            {
+                "name": "ARC-Seal",
+                "value": "i=2; a=rsa-sha256; t=1728207118; cv=pass;        d=google.com; s=arc-20240605;        b=SjPlfG1vJtYxrQKW9oskAykpCZb+dAhSGA7EJA5IuImDY7EydVVYyQ6fl4AEA1zBOx         n9Di58ZvKq0tpxdBXLKcsczBfgKrJE8SU6SfkQCDZwsd/XRf3/+h+s+s7i3nw/IK4PI+         emzDxGJRO43fNG4L010q3NBjnIBRPQ81OkY3m2l7suhY/QbX3dNdTHI4XGBIJVkiS/Lo         xvR6aCoQIwiuifGogrPgqLp/u9MttwQYlZBWAuRq/SVAzHzMJiYEMXBmZroDIc0fhtxR         auToRu/MH7POiMc25Tl/cK/h+YCBV2x+38O8vuhPzK2ct6ugEaAzMvUw340GxleVmxv9         SGXw=="
+            },
+            {
+                "name": "ARC-Message-Signature",
+                "value": "i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;        h=mime-version:msip_labels:content-language:accept-language         :message-id:date:thread-index:thread-topic:subject:to:from         :dkim-signature;        bh=4ZEFV15V2TWbsaKEjP1CmIOMXX4zSnp7Dz8fsA8Rbv0=;        fh=BoogZ5Gbx7qflK2KaAqhBg+IIgWoy1e7yLK7A5Inc/o=;        b=FBNGNH2hMsMMjX2WQiN76hd6LRn7r9AGke/4WDTGv2SDFpQBN7/YV53uBnTOsdGD48         12/bSuNwdjL7pH5ZEyKnei/ZEsE0e29qi3jLb9jXzS8CrDyaDkxu6UM23iUH/qSvJa7N         KjtE4AjhgtPY7dY4i0Y5i+0ia2+JjAM7g2Frc1C1CeyGbpSFEVaLHXmTtvDHGL2dMb2r         7aGgHEo10AEsQ6VL07XDaaDSHGDY8kbCVgC6NZsCPW9Lw7ozrVdz752zcbqf41HwlfRw         fu8DvGoXzIDCxpaqjgJtj6QGz1bgyBroBGQuJ4JKD2kXqtQMIb84XNgVcFM/+13DUUZQ         hQkw==;        dara=google.com"
+            },
+            {
+                "name": "ARC-Authentication-Results",
+                "value": "i=2; mx.google.com;       dkim=pass header.i=@outlook.com header.s=selector1 header.b=CGhX39E+;       arc=pass (i=1);       spf=pass (google.com: domain of pspohr@outlook.com designates 2a01:111:f400:feab::80f as permitted sender) smtp.mailfrom=pspohr@outlook.com;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com"
+            },
+            {
+                "name": "Return-Path",
+                "value": "<pspohr@outlook.com>"
+            },
+            {
+                "name": "Received",
+                "value": "from APC01-SG2-obe.outbound.protection.outlook.com (mail-sgaapc01olkn2080f.outbound.protection.outlook.com. [2a01:111:f400:feab::80f])        by mx.google.com with ESMTPS id d9443c01a7336-20c138afe7asi37480105ad.47.2024.10.06.02.31.58        for <spohrpatrick@gmail.com>        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);        Sun, 06 Oct 2024 02:31:58 -0700 (PDT)"
+            },
+            {
+                "name": "Received-SPF",
+                "value": "pass (google.com: domain of pspohr@outlook.com designates 2a01:111:f400:feab::80f as permitted sender) client-ip=2a01:111:f400:feab::80f;"
+            },
+            {
+                "name": "Authentication-Results",
+                "value": "mx.google.com;       dkim=pass header.i=@outlook.com header.s=selector1 header.b=CGhX39E+;       arc=pass (i=1);       spf=pass (google.com: domain of pspohr@outlook.com designates 2a01:111:f400:feab::80f as permitted sender) smtp.mailfrom=pspohr@outlook.com;       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=outlook.com"
+            },
+            {
+                "name": "ARC-Seal",
+                "value": "i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none; b=iZklsam1k4EWrYYYD4JiKIqy+Q/Rq9XTpFIWM+SHKjueWNOJJ4JzU1iCLXrAd4Lg8DpkUVo+rb3wAekK7FSK5UfiAae4+LvqOVRsSJ9ZHnTR56bFA3FQ0eILdb6oZLaY/aHsDF3tK6tVzl+tT72YOdfpA2RsNLyAB0IIPCwW1EKip6yf7WPXA/BuUV8I9DLVQVb/TqnhdW4xACfXvJ4aXaimMGBWR5wzlZquKaG6vzKAGYaGP84ZtWr1Z8ZshICcqvqASXNMuw24pXng/BuwskTTtUerVxWYSeb/VirpdBDZGOPyPDsVHYr5rslUuqLhvLuuCZuji6hjGe3vxNOquA=="
+            },
+            {
+                "name": "ARC-Message-Signature",
+                "value": "i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; s=arcselector10001; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1; bh=4ZEFV15V2TWbsaKEjP1CmIOMXX4zSnp7Dz8fsA8Rbv0=; b=TX7oV6UAUVinTYLQYay8lY5CbdJuN//aSfcgWlWSMml8igjEPWoN6qG7GNkHUXs9W156jHfC56FtKoHJyirpYNCn5Sb5e2Y1DBrDmq0r7KzPw/LSEoyRqBezbzYHsqtR01hV2xmrVE4GZcnIHNw/Qdl+fugFdaq64XUk4nnxEcNTW35DtV0PddB/HHY10mrVXp2kLdk4x/3FCm3oJicyYMTwy6YnBpWcSOq1SWTIxFuvinVV5BaaqeP0eUuyWBHcSJfE8L7hKx4sdtoEesbdGV9vGVkQiBDw4PtSQcXpLkCRoVCLhbrQUolXQth4vyJYDybNbQqtUBQQjX9QZ1u3XQ=="
+            },
+            {
+                "name": "ARC-Authentication-Results",
+                "value": "i=1; mx.microsoft.com 1; spf=none; dmarc=none; dkim=none; arc=none"
+            },
+            {
+                "name": "DKIM-Signature",
+                "value": "v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com; s=selector1; h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck; bh=4ZEFV15V2TWbsaKEjP1CmIOMXX4zSnp7Dz8fsA8Rbv0=; b=CGhX39E++7XoweZP7Fzm0XQdboUdKypqL/kKN/nEYYIrBX+v+Fn+/78Hm7nHYg9iSlN4g2e650TwtAonNhFL2JZstbgxBJzO4GwCuXyNgMZndsobesXshrca8x5JaAJDZ1ZyyBsHnCd7fhSBTSNl5eKTmAAMMEYbpqNkefiyKrgNvqb5PmamolPs7lcIOG9+kuhvjytWOdd8wOtHWOn9fHCBx2U282iGx+aCl9p/YBfzbQ0Pgk9Gc74wpXRr2kZdSEMCHHBIXwD28x7BVLmY2L7pI3pLza11GQBN4ByhfhZqirxyVhEqsxq7tmM0Tqj2o1lV2a9dKw06KHUnMhLb0g=="
+            },
+            {
+                "name": "Received",
+                "value": "from TYZPR04MB7905.apcprd04.prod.outlook.com (2603:1096:405:b9::8) by SI6PR04MB8331.apcprd04.prod.outlook.com (2603:1096:4:21e::7) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8026.22; Sun, 6 Oct 2024 09:31:55 +0000"
+            },
+            {
+                "name": "Received",
+                "value": "from TYZPR04MB7905.apcprd04.prod.outlook.com ([fe80::7bb8:7cde:4c14:ae5a]) by TYZPR04MB7905.apcprd04.prod.outlook.com ([fe80::7bb8:7cde:4c14:ae5a%5]) with mapi id 15.20.8026.019; Sun, 6 Oct 2024 09:31:55 +0000"
+            },
+            {
+                "name": "From",
+                "value": "Patrick Spohr <pspohr@outlook.com>"
+            },
+            {
+                "name": "To",
+                "value": "Patrick Spohr <spohrpatrick@gmail.com>"
+            },
+            {
+                "name": "Subject",
+                "value": "555"
+            },
+            {
+                "name": "Thread-Topic",
+                "value": "555"
+            },
+            {
+                "name": "Thread-Index",
+                "value": "AQHbF9KS+l/h5llQQk2C2kIwPCYfOQ=="
+            },
+            {
+                "name": "Date",
+                "value": "Sun, 6 Oct 2024 09:31:55 +0000"
+            },
+            {
+                "name": "Message-ID",
+                "value": "<TYZPR04MB7905AF9360036FE0815A0F86DA7C2@TYZPR04MB7905.apcprd04.prod.outlook.com>"
+            },
+            {
+                "name": "Accept-Language",
+                "value": "en-US"
+            },
+            {
+                "name": "Content-Language",
+                "value": "en-US"
+            },
+            {
+                "name": "X-MS-Has-Attach",
+                "value": ""
+            },
+            {
+                "name": "X-MS-TNEF-Correlator",
+                "value": ""
+            },
+            {
+                "name": "msip_labels",
+                "value": ""
+            },
+            {
+                "name": "x-ms-exchange-messagesentrepresentingtype",
+                "value": "1"
+            },
+            {
+                "name": "x-ms-publictraffictype",
+                "value": "Email"
+            },
+            {
+                "name": "x-ms-traffictypediagnostic",
+                "value": "TYZPR04MB7905:EE_|SI6PR04MB8331:EE_"
+            },
+            {
+                "name": "x-ms-office365-filtering-correlation-id",
+                "value": "724bf6b0-0f07-4bd3-9f13-08dce5e9b7d7"
+            },
+            {
+                "name": "x-microsoft-antispam",
+                "value": "BCL:0;ARA:14566002|461199028|8062599003|15030799003|7092599003|15080799006|19110799003|3412199025|440099028|102099032;"
+            },
+            {
+                "name": "x-microsoft-antispam-message-info",
+                "value": "Jat5JfPKfiJywN8X8FpIz26fXhMHWGOEkw3M26LPdbTEjSCW1ieT6zd3RaclXlmH8LVcaHXJvW7B/C3sEx0Ex64NmieZ93qOhmrac7TQ+J1xgFYd6sN7yFYR0zdN01h98ast6YtXcYa4itUFwJCdSXq1lbwK3bYJcabyuB2q9EilN7Bel5+KEU8UVHrEfGx1E9fbFmuJz9D58le4lehrxoEKI0mYxGUttihmaEzO6W5G9wANUEU5lOJnDYvUkQtWGYGK3MAewysWBxT35/5Y4XtW4PUbThhqRrkRAsBh1Ab5pwFZZKGTH8wcs9tzLKKSZsiZjXL6jd0ht/hl+PxjDAsh6EdCrE6K7zCfooRf8OuUlVF6sx2jWrebXvs+XtbKUUYBsxym86aO9bwXEWLE2mDHlYXKGoUqbfmTOgbr0f+bc4IWioHSPTMuzTc1PJ4Px+6RU1hI8I3tx0+rDHzhmQhvIQjoFkDWl1e3Bkd3+Ls="
+            },
+            {
+                "name": "x-ms-exchange-antispam-messagedata-chunkcount",
+                "value": "1"
+            },
+            {
+                "name": "x-ms-exchange-antispam-messagedata-0",
+                "value": "f341PlE5PQJ3BOK7RripK3i6fG0dA3MCs/U6vQHZZaLxZcYyVJKb7L7IEhAB1yCAh66pm/E4lnolMpYM1r3MxCtRvfhlkfXrPkkLag1+UTXJMbhNixKfTlr/IdE3IfbrdcY/8L/NH3ATzRhNrZXPef83+uJhd4XVZChNxGCLNffcEQFpxQDWZs2pbI1CNUDi1+101cXHNZ/32KrVlHaMqYksSAAwDKuSfl/TuCfNMJJmKz1gExa9i1V/iLSEeicV21p2uzqpPfO+K6eKxx0s2Ufe3wRQTbGrNLt9MIASGwlt5Z8zwrpikAZqA9MZrfsn5xp5/l3OW+CQoOVpxFUTg+OjLKd1KctO5HcqIxxcRy10nh/fivyGkPdT4IkUqk7Ji7dAIxGsDcMjvdLnw90CcCKk3DAJ1Y271ILFAmvioxNMrXBIUPflavkxzXaSDrmg80l2R6foSJEPS5oa2A4TF8vCwQriifEvH5IznqiGQWo6EdfAfhifz3g1X1ClWgR0xKaxeWNi47Ap9faq9vOSH6L6A8Ji6WY8bLzdQWF5gwKK61Zb5LjWy9GOroXDYw1Ed5R6G4ivjZKxwRkM1Ph2+EJnnmywCz9GfOcgRPhLtZwS0EE6AIqBcLs29pvOA/xH736OkqiJJmZOS40gaypmT+JXZ+A4MZcQIxJBGnlUqdryAH6XhKZ5i12cxWUvy1ODpbROuxD3ODHzWiwHa9MQc3Pfx7FccG6vzBQqoL/ADp+PToqSi2e6qqFLX2oipx4jAJbEIdHErRrrpzCMzzduyd4GdFlS90MMpSRStp3z298GAfnhsf7tP5FUzActHb1x4RR672IORJMKCQ+ou9AF832kkhxopxGcPKyIStCow+74WgnKvXJKte63beva/OxTpG04MXLZr5yHoRig9yMbeqVW7HuywQPW7uKZl+x/VMfjob94GDeRkgKwmn0IcB8VpB+/NK8iwkd29ooT1kUXVzukOsk0x7Qq0uDFq2gsm+2YO9HpqNi+wYflFBtpcx4PDp01A9GoPF5udb9iMchzzg9A97HvgdpJRrHN0h7YkTwKRSzydd/Sp405x4CVwCiToGHW/CsXB6yOvBES8IJw5q1fzvDDAae05lfdqlc2oDzcdKMDrbrTt7R4XX9TI/busaOjcEyAnRjip13vqy5+CmW2q6busGyE16RzklpSJwLNgVA/lBXzo0AdC1+myKZH/S+HhYrkx7+loDkCoVlOZg=="
+            },
+            {
+                "name": "Content-Type",
+                "value": "multipart/alternative; boundary=\"_000_TYZPR04MB7905AF9360036FE0815A0F86DA7C2TYZPR04MB7905apcp_\""
+            },
+            {
+                "name": "MIME-Version",
+                "value": "1.0"
+            },
+            {
+                "name": "X-OriginatorOrg",
+                "value": "outlook.com"
+            },
+            {
+                "name": "X-MS-Exchange-CrossTenant-AuthAs",
+                "value": "Internal"
+            },
+            {
+                "name": "X-MS-Exchange-CrossTenant-AuthSource",
+                "value": "TYZPR04MB7905.apcprd04.prod.outlook.com"
+            },
+            {
+                "name": "X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg",
+                "value": "00000000-0000-0000-0000-000000000000"
+            },
+            {
+                "name": "X-MS-Exchange-CrossTenant-Network-Message-Id",
+                "value": "724bf6b0-0f07-4bd3-9f13-08dce5e9b7d7"
+            },
+            {
+                "name": "X-MS-Exchange-CrossTenant-originalarrivaltime",
+                "value": "06 Oct 2024 09:31:55.4234 (UTC)"
+            },
+            {
+                "name": "X-MS-Exchange-CrossTenant-fromentityheader",
+                "value": "Hosted"
+            },
+            {
+                "name": "X-MS-Exchange-CrossTenant-id",
+                "value": "84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa"
+            },
+            {
+                "name": "X-MS-Exchange-CrossTenant-rms-persistedconsumerorg",
+                "value": "00000000-0000-0000-0000-000000000000"
+            },
+            {
+                "name": "X-MS-Exchange-Transport-CrossTenantHeadersStamped",
+                "value": "SI6PR04MB8331"
+            }
+        ],
+        "body": {
+            "size": 0
+        },
+        "parts": [
+            {
+                "partId": "0",
+                "mimeType": "text/plain",
+                "filename": "",
+                "headers": [
+                    {
+                        "name": "Content-Type",
+                        "value": "text/plain; charset=\"iso-8859-1\""
+                    },
+                    {
+                        "name": "Content-Transfer-Encoding",
+                        "value": "quoted-printable"
+                    }
+                ],
+                "body": {
+                    "size": 6,
+                    "data": "VEVTVA0K"
+                }
+            },
+            {
+                "partId": "1",
+                "mimeType": "text/html",
+                "filename": "",
+                "headers": [
+                    {
+                        "name": "Content-Type",
+                        "value": "text/html; charset=\"iso-8859-1\""
+                    },
+                    {
+                        "name": "Content-Transfer-Encoding",
+                        "value": "quoted-printable"
+                    }
+                ],
+                "body": {
+                    "size": 406,
+                    "data": "PGh0bWw-DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0idGV4dC9odG1sOyBjaGFyc2V0PWlzby04ODU5LTEiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIiBzdHlsZT0iZGlzcGxheTpub25lOyI-IFAge21hcmdpbi10b3A6MDttYXJnaW4tYm90dG9tOjA7fSA8L3N0eWxlPg0KPC9oZWFkPg0KPGJvZHkgZGlyPSJsdHIiPg0KPGRpdiBjbGFzcz0iZWxlbWVudFRvUHJvb2YiIHN0eWxlPSJmb250LWZhbWlseTogQXB0b3MsIEFwdG9zX0VtYmVkZGVkRm9udCwgQXB0b3NfTVNGb250U2VydmljZSwgQ2FsaWJyaSwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmOyBmb250LXNpemU6IDEycHQ7IGNvbG9yOiByZ2IoMCwgMCwgMCk7Ij4NClRFU1Q8L2Rpdj4NCjwvYm9keT4NCjwvaHRtbD4NCg=="
+                }
+            }
+        ]
+    },
+    "sizeEstimate": 10100,
+    "historyId": "1773517",
+    "internalDate": "1728207115000"
+}
