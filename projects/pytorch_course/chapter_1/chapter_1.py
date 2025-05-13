@@ -3,8 +3,12 @@
 
 import torch
 from torch import nn
+
 import matplotlib.pyplot as plt
+
 import numpy as np
+
+from pathlib import Path
 
 # %%
 
@@ -74,7 +78,8 @@ def plot_predictions(train_data,
     ax.scatter(test_data[0], test_data[1], label= 'Testing Data')
     
     if predictions is not None:
-        plt.scatter(test_data[0], predictions, label= 'Predictions')
+        plt.scatter(test_data[0], predictions, 
+                    label= 'Predictions', s= 8, color= 'black')
     
     fig.suptitle('ML Data')
     
@@ -120,8 +125,13 @@ plot_predictions((X_train, y_train), (X_test, y_test), y_hat_test)
 
 # %%
 
+# intitialize optimizer with model's parameters
 optimizer = torch.optim.Adam(model_0.parameters(), lr= 0.001)
 loss_fn = nn.MSELoss()
+
+epoch_count = []
+loss_values = []
+test_loss_values = []
 
 n_epoch = 0
 for epoch in np.arange(start=0,stop=3500, step=1):
@@ -141,22 +151,90 @@ for epoch in np.arange(start=0,stop=3500, step=1):
     
     # updates model parameters/weights
     optimizer.step()
-
-    if n_epoch % 500 == 0:
-                
-        print(f'Loss: {loss}')
+    
+    # evaluate model
+    model_0.eval()
+    with torch.inference_mode(): # == torch.no_grad()
+        # forward pass
+        test_preds = model_0(X_test)
         
-        with torch.inference_mode(): # == torch.no_grad()
-            y_hat_test = model_0(X_test)
+        # calculate loss
+        test_loss = loss_fn(test_preds, y_test)
 
-        plot_predictions((X_train, y_train), (X_test, y_test), y_hat_test)
-
+        if n_epoch % 500 == 0:
+            epoch_count.append(n_epoch)
+            loss_values.append(float(loss))
+            test_loss_values.append(float(test_loss))
+                    
+            print(f'Epoch: {n_epoch} | Loss: {loss} | Test loss: {test_loss}')
+       
+            plot_predictions((X_train, y_train), (X_test, y_test), test_preds)
+    
     n_epoch += 1
 
 # %%
-model_0.eval()
-print(model_0.training)
+
 print(model_0.state_dict()['weights'])
 print(model_0.state_dict()['bias'])
 
 # %%
+
+print(epoch_count)
+print(loss_values)
+print(test_loss_values)
+
+# %%
+
+# plot loss
+fig, ax = plt.subplots(1,1)
+
+ax.plot(epoch_count, loss_values, label= 'Loss')
+ax.plot(epoch_count, test_loss_values, label= 'Test Loss')
+
+ax.set_title('Loss Values of model_0')
+ax.set_xlabel('Epochs')
+ax.set_ylabel('Loss')
+
+ax.legend()
+
+plt.show()
+
+# %%
+
+# Path requires parent dir, not just sibling
+SAVE_DIR = Path('chapter_1/saved_models')
+
+# save model
+torch.save(model_0, f= SAVE_DIR / 'model_0.pth')
+
+# %%
+
+torch.save(model_0.state_dict(), f= SAVE_DIR / 'model_0_state_dict.pth')
+
+# %%
+
+model_0_loaded = torch.load(SAVE_DIR / 'model_0.pth', weights_only=False)
+
+# %%
+
+model_0_loaded.eval()
+      
+with torch.inference_mode():
+    y_preds_loaded = model_0_loaded(X_test)
+
+# %%
+
+fig, ax = plt.subplots(1,1)
+ax.scatter(X_test, y_test, color= 'orange')
+ax.scatter(X_test, y_preds_loaded, color= 'black', s= 8)
+
+# %%
+
+model_0_loaded.state_dict()
+
+# %%
+
+list(model_0_loaded.parameters())
+
+# %%
+
