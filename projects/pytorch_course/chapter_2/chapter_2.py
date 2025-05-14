@@ -199,13 +199,3 @@ with th.inference_mode():
 fig, ax = plt.subplots(1,1)
 ax.scatter(x_st, y_rand, c= y_circle_pred.cpu().numpy().flatten())
 plt.show()
-
-# %%
-
-th.tensor([x_st, y_rand.flatten()])
-
-# %%
-
-th.tensor([x_st, y_rand.flatten()]).reshape(1000,2)
-
-# %%
