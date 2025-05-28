@@ -111,11 +111,17 @@ class LinearRegressionModel(nn.Module):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         return self.weights * x + self.bias
 
+
 # %%
 
 torch.manual_seed(42)
 model_0 = LinearRegressionModel()
 
+# %%
+
+list(enumerate(model_0.parameters()))
+
+# %%
 # InferenceMode is a context manager analogous to no_grad
 # code peforms better by disabling view tracking and version counter bumps
 with torch.inference_mode(): # == torch.no_grad()
@@ -238,3 +244,32 @@ list(model_0_loaded.parameters())
 
 # %%
 
+test_model = torch.nn.Sequential(
+    torch.nn.Linear(1,2),
+    torch.nn.Linear(2,1)
+)
+
+# %%
+
+for num, param in enumerate(test_model.parameters()):
+    print(f'{num} ---------------')
+    print(param)
+    print(type(param))
+
+# %%
+
+list(test_model.named_parameters())
+
+# %%
+
+import time
+
+# %%
+
+start = time.time()
+[(x * 2 - 1) for x in range(10_000)] 
+end = time.time()
+
+# %%
+
+print(end - start)
