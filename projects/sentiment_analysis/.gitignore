@@ -1,2 +1,4 @@
 # keep data local
 /data
+/.ipynb_checkpoints
+/__pycache__
