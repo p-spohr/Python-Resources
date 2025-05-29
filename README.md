@@ -1,3 +1,3 @@
-# HTW Berlin Python Tutorium
+# Python Practice Repo
 
-Repo for all of the example code, practice assignments, and explanations.
+Repo for all of the example code and practice.
