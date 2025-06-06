@@ -59,5 +59,3 @@ def numpy_sequence_target(time_series : np.array, sequence_length: int) -> tuple
                 targets = np.append(targets, targ)
                 
     return sequence, targets
-
-def
