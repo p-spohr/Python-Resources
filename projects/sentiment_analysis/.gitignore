@@ -1,5 +1,0 @@
-# keep data local
-/data
-# no caches
-*.ipynb_checkpoints
-*__pycache__
