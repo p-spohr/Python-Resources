@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    
+    </head>
+    
+    <body>
+        <form method= 'POST'>
+            {{ form.hidden_tag() }}
+            {{ form.owner.label(style= 'color:green;') }} {{ form.owner() }} <br>
+            {{ form.name.label(style= 'color:blue;') }} {{ form.name() }} <br>
+            {{ form.breed.label(style= 'color:red;') }} {{ form.breed() }} <br>
+            {{ form.neutered.label() }} {{ form.neutered() }} <br>
+            {{ form.mood.label() }} {{ form.mood(style = 'list-style-type:none;') }} <br>
+            {{ form.food.label() }} {{ form.food() }} <br>
+            {{ form.feedback.label() }} {{ form.feedback() }} <br>
+            {{ form.submit() }}
+        </form>
+    </body>
+
+</html>

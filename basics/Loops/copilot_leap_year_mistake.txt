@@ -1,0 +1,25 @@
+## You
+
+[1020, 1500, 1800, 2000, 2004, 2024, 3000, 3054] which year is a leap year in the list
+
+## Copilot
+
+The leap years in your list are:
+
+- 1020
+- 1500
+- 2000
+- 2004
+- 2024
+
+Leap years are typically every 4 years, but there are exceptions. For instance, years divisible by 100 are not leap years unless they are also divisible by 400. This is why 1800, 3000, and 3054 are not leap years.
+Is there anything else you'd like to know about leap years?
+
+## You
+
+are you sure 1500 is a leap year
+
+## Copilot
+
+You’re right to question that! Upon closer inspection, 1500 is not a leap year. While it is divisible by 4, it fails the rule for century years: it must also be divisible by 400 to be a leap year. So, 1500 is not a leap year.
+Thanks for catching that! If you have any more questions or need further clarification, feel free to ask. 😊

@@ -1,0 +1,58 @@
+{
+    "id": "1928bad5fbbaac80",
+    "threadId": "1928bad5fbbaac80",
+    "labelIds": [
+        "SENT"
+    ],
+    "snippet": "Dear pat_hockey45, please attach image to be analyzed --- Thank you! Have a nice day!",
+    "payload": {
+        "partId": "",
+        "mimeType": "text/plain",
+        "filename": "",
+        "headers": [
+            {
+                "name": "Received",
+                "value": "from 105761120282 named unknown by gmailapi.google.com with HTTPREST; Mon, 14 Oct 2024 11:37:28 -0400"
+            },
+            {
+                "name": "To",
+                "value": "pat_hockey45@hotmail.com"
+            },
+            {
+                "name": "From",
+                "value": "Image Describer 2024 <spohrpatrick@gmail.com>"
+            },
+            {
+                "name": "Subject",
+                "value": "Please attach image"
+            },
+            {
+                "name": "Content-Type",
+                "value": "text/plain; charset=\"utf-8\""
+            },
+            {
+                "name": "Content-Transfer-Encoding",
+                "value": "quoted-printable"
+            },
+            {
+                "name": "MIME-Version",
+                "value": "1.0"
+            },
+            {
+                "name": "Date",
+                "value": "Mon, 14 Oct 2024 11:37:27 -0400"
+            },
+            {
+                "name": "Message-Id",
+                "value": "<CADk5N0kvWROYJ32Kwj9oBxGj3vTPVzHgC_4HNFSXuZuDvbHdiQ@mail.gmail.com>"
+            }
+        ],
+        "body": {
+            "size": 86,
+            "data": "RGVhciBwYXRfaG9ja2V5NDUsIHBsZWFzZSBhdHRhY2ggaW1hZ2UgdG8gYmUgYW5hbHl6ZWQgLS0tIFRoYW5rIHlvdSEgSGF2ZSBhIG5pY2UgZGF5IQo="
+        }
+    },
+    "sizeEstimate": 552,
+    "historyId": "1793782",
+    "internalDate": "1728920247000"
+}

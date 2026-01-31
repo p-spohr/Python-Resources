@@ -1,0 +1,25 @@
+ Volume in drive C is OS
+ Volume Serial Number is 8C83-FD95
+
+ Directory of C:\Users\pat_h\OneDrive\public-repos\Python-Resources
+
+05/22/2024  06:05 PM    <DIR>          .
+04/17/2024  04:49 PM    <DIR>          ..
+05/22/2024  04:20 PM             2,404 Accessing CMD with Python.py
+05/22/2024  05:44 PM             1,495 Accessing Git with Python.py
+05/22/2024  04:02 PM             2,404 Accessing Python Shell.py
+05/21/2024  06:32 PM    <DIR>          Comments and Docstrings
+05/21/2024  06:34 PM    <DIR>          Conditions
+05/23/2024  10:54 AM                 0 dir.txt
+04/17/2024  04:49 PM             1,085 LICENSE
+05/21/2024  06:34 PM    <DIR>          Loops
+05/22/2024  03:17 PM             3,590 Navigation.py
+05/21/2024  06:03 PM                12 Operations.py
+05/20/2024  03:59 PM               107 README.md
+05/21/2024  06:33 PM    <DIR>          Standard Library
+05/22/2024  04:09 PM               149 Test Open Obsidian.py
+05/22/2024  06:04 PM               249 test_command.bat
+05/21/2024  06:33 PM    <DIR>          Variables and Operations
+05/21/2024  06:07 PM               600 Variables.py
+              11 File(s)         12,095 bytes
+               7 Dir(s)  592,221,257,728 bytes free

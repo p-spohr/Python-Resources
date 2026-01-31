@@ -1,0 +1,5 @@
+---Getting Arguments from---
+DIR: C:\Users\pat_h\OneDrive\public-repos\Python-Resources
+FILE: passing_arguments.py
+ARG 1: BOSS
+passing_arguments.py = passing_arguments.py
