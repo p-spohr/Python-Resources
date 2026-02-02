@@ -1,4 +1,4 @@
-from basics import db, Puppy, app
+from database.orm import db, Puppy, app
 
 new_puppy = Puppy('Rufus', 5)
 

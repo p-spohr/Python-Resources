@@ -1,0 +1,16 @@
+from database.orm import db, Puppy, app
+import sqlalchemy
+
+stmt = db.select(Puppy)
+print(stmt)
+    
+with app.app_context():
+    rows = db.session.execute(stmt).scalars()
+    for row in rows:
+        print(row)
+    
+    # stmt2 = sqlalchemy.select(Puppy)
+    # print(stmt2)
+    # rows = db.session.execute(stmt).scalars()
+    # for row in rows:
+    #     print(row)

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, redirect, url_for, request
+from flask import Flask, render_template, session, redirect, url_for, request, flash
 from flask_wtf import FlaskForm
 from wtforms import (StringField, BooleanField, DateTimeField, RadioField, 
                      SelectField, TextAreaField, SubmitField, validators)
@@ -22,10 +22,33 @@ class InfoForm(FlaskForm):
                        choices= [('chicken', 'Chicken'), ('beef', 'Beef'), ('fish', 'Fish')]) # u'' for unicode string
     feedback = TextAreaField(label= 'Feedback')
     submit = SubmitField(label= 'Submit')
-   
-    
-@app.route('/', methods= ['GET', 'POST'])
+
+class ClickMeForm(FlaskForm):
+    submit = SubmitField(label= 'Click me!')
+
+
+@app.route('/', methods= ['GET'])
 def index():
+    return '<h1>Welcome!</h1>'
+
+
+@app.route('/click_me', methods= ['GET', 'POST'])
+def click_me():
+    form = ClickMeForm()
+    # check if count is in session and set to zero
+    if not session.get('count'):
+        session['count'] = 0
+    if form.validate_on_submit():
+        session['count'] += 1
+        app.logger.log(logging.INFO, f'Count: {session['count']}')
+        flash(f'You just clicked the button {session['count']} times!')
+        # flash('You just clicked the button!')
+        return redirect(url_for('click_me'))
+    return render_template('click_me.html', form= form)
+    
+
+@app.route('/form', methods= ['GET', 'POST'])
+def form():
     form = InfoForm()
     if form.validate_on_submit():
         for label, data in form.data.items():
@@ -34,9 +57,9 @@ def index():
         # https://docs.python.org/3/library/logging.html#logging-levels
         # check out logging levels for more logging options
         app.logger.log(logging.INFO, session)
-        return redirect(url_for(f'thank_you'))
+        return redirect(url_for('thank_you'))
     # make sure index.html is in templates directory!
-    return render_template('index.html', form=form)
+    return render_template('form.html', form=form)
 
 
 @app.route('/thank_you', methods= ['GET'])
@@ -52,6 +75,7 @@ def thank_you():
 def hello():
     name = request.args.get("name")
     return f"<h1>Hello, {escape(name)}!</h1>"
+
 
 # variable sections to a URL: function receives the <variable_name> as a keyword argument.
 @app.route('/user/<username>', methods= ['GET'])

@@ -1,8 +1,5 @@
-# %%
 
-from basics import db, Puppy, app
-
-# %%
+from database.orm import db, Puppy, app
 
 # manual request when app not running
 with app.app_context():
@@ -23,4 +20,3 @@ with app.app_context():
     
     print(db.session.execute(db.select(Puppy.name).order_by(Puppy.name)).scalars().all())
 
-# %%
