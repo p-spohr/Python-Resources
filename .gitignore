@@ -1,3 +1,4 @@
 # gitignore
 /login
-
+*.env
+*.cfg
