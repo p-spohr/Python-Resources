@@ -5,8 +5,8 @@ stmt = sqlalchemy.text("SELECT * FROM sqlite_master WHERE type='table'")
 print(stmt)
 
 with app.app_context():
-    rows = db.session.execute(stmt)
-    for row in rows:
+    results = db.session.execute(stmt)
+    for row in results:
         print(row)
     
     # stmt2 = sqlalchemy.select(Puppy)

@@ -14,6 +14,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'app.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_ECHO'] = True
 
 
 class Base(DeclarativeBase):
@@ -28,7 +29,7 @@ db.init_app(app)
 
 class Owner(db.Model):
     # manually name table
-    # __tablename__ = 'puppies'
+    # __tablename__ = 'owners'
     
     id: Mapped[int] = mapped_column(primary_key= True)
     first_name: Mapped[str]
@@ -60,7 +61,7 @@ class Puppy(db.Model):
     
 class Home(db.Model):
     # manually name table
-    # __tablename__ = 'puppies'
+    # __tablename__ = 'homes'
     
     id: Mapped[int] = mapped_column(primary_key= True)
     city: Mapped[str]
