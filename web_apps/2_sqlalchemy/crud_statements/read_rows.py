@@ -2,9 +2,11 @@ from database.orm import db, Puppy, app
 import sqlalchemy
 import sys
 
+# generate SQL statements through flask
 stmt = db.select(Puppy)
 print(stmt)
 
+# write SQL statements and parse with sqlalchemy.text()
 stmt2 = sqlalchemy.text(
     'SELECT * FROM puppy WHERE puppy.name LIKE :pattern'
 )
