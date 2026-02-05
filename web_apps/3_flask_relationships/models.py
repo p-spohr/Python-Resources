@@ -42,7 +42,8 @@ class Puppy(db.Model):
         self.name = name
     def __repr__(self):
         if self.owner:
-            return f"Puppy name is {self.name} and owner is {self.owner.name}"
+            get_toys = [toy for toy in db.session.execute(self.toys).scalars()]
+            return f"Puppy name is {self.name}, owner is {self.owner.name}, and has toys: {get_toys}."
         else:
             return f"Puppy name is {self.name} and has no owner yet!"
     def report_toys(self):
@@ -56,19 +57,24 @@ class Toy(db.Model):
     item_name: Mapped[String] = mapped_column(String(50))
     # Foreign key
     puppy_id: Mapped[Integer] = mapped_column(ForeignKey('puppy.id'))
-    # many-to-one relationship: the toy belongs to one puppy; back_populates corresponds with 'toys' reference in Puppy
+    # many-to-one relationship: the toy belongs to one puppy
+    # back_populates corresponds with 'toys' reference/relationship in Puppy
     puppy: Mapped['Puppy'] = relationship(back_populates= 'toys')
     def __init__(self, item_name, puppy_id):
         self.item_name = item_name
         self.puppy_id = puppy_id
-        
+    def __repr__(self):
+        return f"{self.item_name} belongs to {self.puppy.name}"
 
 class Owner(db.Model):
     id: Mapped[int] = mapped_column(primary_key= True, autoincrement= True)
     name: Mapped[String] = mapped_column(String(50))
-    # one-to-one: each owner has one puppy
     puppy_id: Mapped[Integer] = mapped_column(ForeignKey('puppy.id'))
+    # one-to-one: each owner has one puppy
     puppy: Mapped['Puppy'] = relationship(back_populates= 'owner')
     def __init__(self, name, puppy_id):
         self.name = name
         self.puppy_id = puppy_id
+    def __repr__(self):
+        # get_puppy = db.session.execute(self.puppy_id)
+        return f"{self.name} has the puppy called {self.puppy.name}."
