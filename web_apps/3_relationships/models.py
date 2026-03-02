@@ -42,7 +42,7 @@ class Puppy(db.Model):
         self.name = name
     def __repr__(self):
         if self.owner:
-            get_toys = [toy for toy in db.session.execute(self.toys).scalars()]
+            get_toys = [toy.item_name for toy in db.session.execute(self.toys).scalars()]
             return f"Puppy name is {self.name}, owner is {self.owner.name}, and has toys: {get_toys}."
         else:
             return f"Puppy name is {self.name} and has no owner yet!"

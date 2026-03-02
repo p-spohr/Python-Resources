@@ -5,7 +5,7 @@ def query_print(table):
     table_name = table.__tablename__
     results = table.query.all()
     if len(results) > 0:
-        print(f'TABLE {table_name} has {len(results)} items.')
+        print(f'TABLE {table_name} has {len(results)} items:')
         for row in results:
             print(row)
     else:
